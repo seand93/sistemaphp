@@ -1,5 +1,5 @@
 <?php
-class Conexion{
+class Conexion {
     private $conect;
     public function __construct(){
         $pdo = "mysql:host=" . HOST . ";dbname=" . DBNAME . ";" . CHARSET;

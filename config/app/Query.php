@@ -1,7 +1,7 @@
 <?php
 class Query extends Conexion{
     private $pdo, $con;
-    public function __construct(){
+    public function __construct() {
         $this->pdo = new Conexion();
         $this->con = $this->pdo->conectar();
     }
