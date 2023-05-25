@@ -6,7 +6,8 @@ class Home extends Controller {
 
     public function index()
     {
-        $this->views->View('principal', 'login' );
+        $data['title'] = 'Iniciar Sesión';
+        $this->views->View('principal', 'login' , $data );
 
     }
 }
