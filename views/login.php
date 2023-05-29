@@ -44,15 +44,17 @@
 									</div>
 									<div class="form-body">
 										<form class="row g-3"id="formulario" method="POST">
-											<div class="col-12">
+											<div class="col-12" autocomplete="off">
 												<label for="correo" class="form-label">Correo Electronico</label>
 												<input type="email" class="form-control" id="correo" placeholder="Correo Electronico" name="correo">
+												<span id="errorCorreo" class="text-danger"></span>
 											</div>
 											<div class="col-12">
 												<label for="clave" class="form-label">Ingrese Contraseña</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="password" class="form-control border-end-0" id="clave" value="admin"  name= "clave" placeholder="Ingrese su contraseña"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+													<input type="password" class="form-control border-end-0" id="clave"  name= "clave" placeholder="Ingrese su contraseña"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
 												</div>
+												<span id="errorClave" class="text-danger"></span>
 											</div>
 											<div class="col-md-12 text-end">	<a href="authentication-forgot-password.html">¿Olvidaste tu contraseña?</a>
 											</div>
@@ -99,6 +101,9 @@
 	</script>
 	<!--app JS-->
 	<script src="<?php echo BASE_URL; ?>assets/js/app.js"></script>
+	<script>
+		const base_url = '<?php echo BASE_URL; ?>';
+	</script>
 	<script src="<?php echo BASE_URL; ?>assets/js/moduls/login.js"></script>
 </body>
 
