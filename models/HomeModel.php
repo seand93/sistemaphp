@@ -4,9 +4,10 @@ class HomeModel extends Query {
         parent::__construct();
     }
 
-    public function getDatos()
+    public function getDatos($correo)
     {
-        
+        $sql = "SELECT nombre, correo, clave FROM usuarios WHERE correo = '$correo'";
+        return $this->select($sql);
     }
 }
 ?>

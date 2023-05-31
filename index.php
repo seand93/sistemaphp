@@ -1,10 +1,14 @@
 <?php
+//este codigo modifica el php.ini para que carguen los errores
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
 error_reporting(E_ALL);
 
+// este encripta el primer parametro echo password_hash('admin',PASSWORD_DEFAULT);
+// exit; 
 require_once 'config/Config.php';
+require_once 'config/Helpers.php';
 
 $ruta = (!empty($_GET['url'])) ? $_GET['url'] : 'home/index';
 $array = explode('/',$ruta);

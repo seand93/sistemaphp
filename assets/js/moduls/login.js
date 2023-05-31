@@ -24,9 +24,12 @@ document.addEventListener('DOMContentLoaded', function(){
             http.send(data);
             //verificar estados
             http.onreadystatechange = function (){
-                if (this.readyState == 4 && this.status == 200)
-                 {
-                    
+                if (this.readyState == 4 && this.status == 200) {
+                    const res = JSON.parse(this.responseText);
+                    if (res.type == 'success'){
+                        window.location = base_url + 'admin';
+                    }
+                    alert(res.msg);
                 }
             }
         }
